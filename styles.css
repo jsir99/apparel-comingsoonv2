@@ -1,9 +1,15 @@
 body{
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
+}
+.background{
+    height: 100%;
+    width: 60vw;
+    z-index: -1;
+    position: absolute;
     background: url(images/bg-pattern-desktop.svg);
-    background-size: contain;
-
+    background-size: cover;
+    
 }
 /* INPUT AREA */
 .input-bar{
@@ -131,6 +137,11 @@ button:hover{
 
 
 @media only screen and (max-width: 768px) {
+    .background{
+        width: 100%;
+        background: RGB(255,245,244);
+        background-size: fill;
+    }
     .container{
         padding-left: 0;
         height: 100vh;
