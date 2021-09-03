@@ -28,7 +28,6 @@
 <body>
 
   <div class="container">
-    <div class="item-left">
       <div class="logo">
         <img src="images/logo.svg" alt="">
       </div>
@@ -39,21 +38,18 @@
         <h1>soon</h1>
         <p>Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
+          
+          <form class="input-bar" id="form" novalidate>
+            <input type="email" id="email" name="email" placeholder="Email Address">
+            <button><img src="images/icon-arrow.svg" alt=""></button>
+            <span id="error-msg"></span>
+            <img src="images/icon-error.svg" alt="" id="error-icon">
+          </form>
       </div>
-
-      <form class="input-bar" id="form" novalidate>
-        <input type="email" id="email" name="email" placeholder="Email Address">
-        <button><img src="images/icon-arrow.svg" alt=""></button>
-        <span id="error">Test</span>
-        <img src="images/icon-error.svg" alt="" id="error-icon">
-      </form>
-    </div>
-
-    <div class="item-right">
+          
       <div class="image">
-        <img src="images/hero-desktop.jpg" alt="">
+        <img src="images/hero-desktop.jpg" id="hero-img" alt="">
       </div>
-    </div>
 
   </div>
 
