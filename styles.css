@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+/* INPUT AREA */
+.input-bar{
+    position: relative;
+    border: 1px solid RGB(209,163,165);
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    width: 70%;
+    max-width: 45ch;
+    height: 1rem;
+    padding: 1.5rem;
+}
+.input-bar > input{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(5%, -50%);
+    border: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    background: transparent;
+    font-size: 1.25rem;
+    color: RGB(209,163,165);
+}
+.input-bar > input::placeholder{ color: RGB(209,163,165)}
+.input-bar > input:focus{
+    outline: none;
+}
+
+.input-bar > button{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right,RGB(246,185,184),RGB(241,146,145));
+    border: 0px;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0.5rem 10px rgba(0,0,0,0.3);
+}
+#error {
+    color: RGB(249,100,100);
+    position: absolute;
+    top: 120%;
+}
+#error-icon {
+    position: absolute;
+    top: 50%;
+    right: 22%;
+    transform: translateY(-50%);
+    /* visibility: hidden;    */
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.item-left{
+    /* border: 1px solid black; */
+    background: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    padding-left: 15%;
+    flex: 1 1 50vw;
+}
+.logo {
+    height: 20%;
+    position: relative;
+}
+.logo img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.item-right{
+    /* border: 1px solid black; */
+    flex: 0 1 40vw;
+    height: 100%;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* item-left TEXT styling */
+.text> h1{
+    font-size: clamp(3rem, 4.17vw, 6rem);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    color: RGB(66,58,59);
+}
+.text> h1:nth-of-type(1){
+    font-weight: 300;
+    color: RGB(209,163,165);
+}
+.text >p {
+    color: RGB(209,163,165);
+    width: 70%;
+    max-width: 45ch;
+    font-size: clamp(0.9rem, 1.1vw ,1.5rem);
+    line-height: 1.7rem;
+}
+.text{
+    margin-bottom: 3rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .item-left{
+        padding-left: 0;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo" 
+        "imag" 
+        "text" 
+        "input";
+    }
+    .logo{
+        grid-area: logo;
+    }
+    .text{
+        grid-area: text;
+    }
+    .item-right{
+        grid-area: imag;
+    }
+    .input-bar{
+        grid-area: input;
+    }
+
+}
